@@ -14,6 +14,12 @@
             color: white;
         }
         
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         .header {
             display: flex;
             justify-content: space-between;
@@ -142,20 +148,25 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="menu-btn" id="menuBtn">
-            <span></span>
-            <span></span>
-            <span></span>
+
+    <div class="container">
+        <div class="header">
+            <div class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="login-btn">Вход</button>
         </div>
-        <button class="login-btn">Вход</button>
     </div>
-    
-    <div class="main-content">
-        <h1>ExSocial - Хуевая социальная сеть</h1>
-        <p>Самая уникальная социальная сеть в которой ничего не работает</p>
+
+    <div class="container">
+        <div class="main-content">
+            <h1>ExSocial - Хуевая социальная сеть</h1>
+            <p>Самая уникальная социальная сеть в которой ничего не работает</p>
+        </div>
     </div>
-    
+
     <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeBtn">&times;</span>

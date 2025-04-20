@@ -12,12 +12,16 @@
             font-family: Arial, sans-serif;
             background-color: #000000;
             color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            flex: 1;
         }
 
         .header {
@@ -163,6 +167,7 @@
             text-align: center;
             transition: transform 0.3s;
             border: 1px solid #333;
+            position: relative;
         }
 
         .feature-block:hover {
@@ -180,6 +185,43 @@
             font-size: 1em;
             margin-bottom: 0;
             opacity: 0.9;
+        }
+
+        /* Нумерация блоков */
+        .feature-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #f7ff82;
+            color: #000;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Футер */
+        footer {
+            background-color: #000000;
+            padding: 20px 0;
+            margin-top: 50px;
+            border-top: 1px solid #333;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-text {
+            color: #777;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -201,22 +243,31 @@
             
             <div class="features">
                 <div class="feature-block">
+                    <div class="feature-number">1</div>
                     <h2>Пользователи</h2>
                     <p>Мы настолько заботимся о пользователях, что у нас на сайте нихуя не работает.</p>
                 </div>
                 
                 <div class="feature-block">
+                    <div class="feature-number">2</div>
                     <h2>Безопасность</h2>
                     <p>Все данные пользователей не защищаются и передаются украинским спец.службам.</p>
                 </div>
                 
                 <div class="feature-block">
+                    <div class="feature-number">3</div>
                     <h2>Функционал</h2>
                     <p>У нас настолько много функций, что пользователи их не видят.</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2023 ExSocial - Все права не защищены. Мы даже не пытались.</p>
+        </div>
+    </footer>
 
     <div class="modal" id="modal">
         <div class="modal-content">

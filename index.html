@@ -50,13 +50,13 @@
             background-color: #f7ff82;
             color: #000000;
             border: none;
-            padding: 6px 25px; /* Увеличил padding для более длинной кнопки */
-            border-radius: 12px; /* Закругление для эффекта "таблетки" */
+            padding: 6px 25px;
+            border-radius: 12px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
             font-size: 16px;
-            min-width: 100px; /* Минимальная ширина кнопки */
+            min-width: 100px;
         }
         
         .login-btn:hover {
@@ -145,6 +145,42 @@
             transform: scale(1.05);
             box-shadow: 0 5px 15px rgba(247, 255, 130, 0.3);
         }
+
+        /* Стили для блоков */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .feature-block {
+            background-color: #111111;
+            border-radius: 15px;
+            padding: 25px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid #333;
+        }
+
+        .feature-block:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-block h2 {
+            color: #f7ff82;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .feature-block p {
+            color: #ccc;
+            font-size: 1em;
+            margin-bottom: 0;
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
@@ -162,6 +198,23 @@
         <div class="main-content">
             <h1>ExSocial - Хуевая социальная сеть</h1>
             <p>Самая уникальная социальная сеть в которой ничего не работает</p>
+            
+            <div class="features">
+                <div class="feature-block">
+                    <h2>Пользователи</h2>
+                    <p>Мы настолько заботимся о пользователях что у нас на сайте нихуя не работает</p>
+                </div>
+                
+                <div class="feature-block">
+                    <h2>Безопасность</h2>
+                    <p>Наши сервера настолько безопасны, что даже мы не можем к ним подключиться</p>
+                </div>
+                
+                <div class="feature-block">
+                    <h2>Функции</h2>
+                    <p>У нас столько функций, что мы даже не успели их добавить на сайт</p>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExSocial</title>
+    <title>ExSocial - Хуевая социальная сеть</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <div class="header">
         <div class="menu-btn" id="menuBtn">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <button class="login-btn">Вход</button>
+        <div>
+            <button class="login-btn" id="registerBtn">Регистрация</button>
+            <button class="login-btn" style="margin-left: 10px;">Вход</button>
+        </div>
     </div>
 
     <div class="container">
         <div class="main-content">
-            <h1>ExSocial - Ужасная социальная сеть</h1>
+            <h1>ExSocial - Хуевая социальная сеть</h1>
             <p>Самая уникальная социальная сеть в которой ничего не работает</p>
             
             <div class="features">
                 <div class="feature-block">
                     <div class="feature-number">1</div>
                     <h2>Пользователи</h2>
-                    <p>Мы настолько заботимся о пользователях, что у нас на сайте ничего не работает.</p>
+                    <p>Мы настолько заботимся о пользователях, что у нас на сайте нихуя не работает.</p>
                 </div>
                 
                 <div class="feature-block">
@@ -48,10 +50,11 @@
 
     <footer>
         <div class="footer-content">
-            <p class="footer-text">© 2025 ExSocial - Все права не защищены. Мы даже не пытались.</p>
+            <p class="footer-text">© 2023 ExSocial - Все права не защищены. Мы даже не пытались.</p>
         </div>
     </footer>
 
+    <!-- Модальное окно для пожертвований -->
     <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeBtn">&times;</span>
@@ -60,9 +63,44 @@
             <button class="donate-btn">Перевести :3</button>
         </div>
     </div>
-    
+
+    <!-- Модальное окно регистрации -->
+    <div class="register-modal" id="registerModal">
+        <div class="register-modal-content">
+            <span class="close-register" id="closeRegister">&times;</span>
+            <h2>Регистрация</h2>
+            
+            <form id="mainRegisterForm" class="register-form">
+                <div class="form-group">
+                    <input type="text" id="regUsername" placeholder="Имя пользователя" required>
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="regEmail" placeholder="Email" required>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="regPassword" placeholder="Пароль" required>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="regConfirmPassword" placeholder="Повторите пароль" required>
+                    <div class="error-message" id="confirmError"></div>
+                </div>
+                
+                <button type="submit" class="register-submit-btn">Зарегистрироваться</button>
+                
+                <div class="already-have-account">
+                    Уже есть аккаунт? <a href="#" id="loginInstead">Войти</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/index.js"></script>
-    
 </body>
 </html>
